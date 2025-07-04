@@ -1,0 +1,227 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Playfair Display", serif;
+}
+.main_box{
+    background: url("photo.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.btn_one i{
+  position: absolute;
+   color: white;
+    margin: 10px;
+    padding: 6px;
+    left: 16px;
+    font-size: 28px;
+    font-weight:600;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    
+}
+.sidebar_menu{
+   position: fixed;
+   left: -250px;
+   height: 100vh;
+   width: 250px;
+   background: rgba(255,255,255,0.1);
+   box-shadow: 0 0 7px rgba(255,255,255,0.5);
+   transition: all 0.1s linear;
+}
+.sidebar_menu .logo{
+    position:absolute;
+    width: 100%;
+    box-shadow: 0 0 2px rgba(255,255,255,0.5);
+    line-height: 60px;
+}
+.sidebar_menu .logo a{
+   position: absolute;
+   color:white;
+   text-decoration: none;
+   left: 70px;
+   font-size: 21px;
+   font-weight: 500;
+   opacity: 1px;
+
+
+}
+/* Positioning the text content */
+.main_box .text_content {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+}
+
+/* Heading styling */
+.main_box .heading {
+  font-size: 50px;
+  color: red;
+  margin: 0;
+}
+
+/* Caption styling */
+.main_box .caption {
+  font-size: 20px;
+  color:white (187, 220, 210);
+  margin-top: 10px;
+}
+
+/* Typewriter animation */
+.main_box .typewriter {
+  --caret: currentcolor;
+  position: relative;
+  display: inline-block;
+  color: red;
+}
+
+.main_box .typewriter::before {
+  content: "In Frame";
+  animation: typing 5s steps(9) 1s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 0ch; /* Initial width for animation */
+}
+
+.main_box .typewriter::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  border-right: 2px solid var(--caret);
+  animation: blink 0.3s step-end infinite;
+  height: 100%;
+}
+
+/* Typing keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9ch;
+  }
+}
+
+/* Blink cursor keyframes */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Accessibility: disable animations if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .main_box .typewriter::before {
+    animation: none;
+    width: auto;
+  }
+
+  .main_box .typewriter::after {
+    animation: none;
+    border-right: none;
+  }
+}
+
+
+
+.sidebar_menu .btn_two i {
+    position: absolute;
+    color: white;
+    margin: 10px;
+    padding: 6px;
+    left: 200px;
+    font-size: 28px;
+    font-weight:600;
+    /* opacity: 0; */
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    color:white;
+    width: 100%;
+    margin:30;
+    padding : 10px;
+    top: 70px;
+}
+.sidebar_menu .menu li{
+    margin-top:8px;
+    padding: 10px 20px;
+
+    
+}
+.sidebar_menu .menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.sidebar_menu .social_media{
+    color:white;
+    /* opacity: 0.5; */
+    position: absolute;
+    left: 25px;
+    bottom : 70px;
+}
+.sidebar_menu .social_media i{
+    color:white;
+    padding:1px 6px;
+    
+}
+#check{
+    display: none;
+}
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 2px rgba(255,255,255,0.5);
+   width: 80%;
+   color: aquamarine;
+}
+.btn_one i:hover{
+    font-size: 30px;
+    color: #c4841d; ;
+
+
+}
+ .btn_two i:hover{
+    font-size: 30px;
+    color:rgb(242, 70, 70);
+
+}
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+#check:checked ~ .sidebar_menu .btn_one i{
+        /* opacity: 0.1; */
+    
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+        /* opacity: 0.5; */
+}
+.sidebar_menu .social_media ul .fa-brands.fa-facebook:hover {
+    color: #4970be;
+}
+.sidebar_menu .social_media ul .fa-brands.fa-twitter:hover {
+    color: #00acee;
+}
+.sidebar_menu .social_media ul .fa-brands.fa-instagram:hover {
+    color: #aa4f6d;
+}
+.sidebar_menu .social_media ul .fa-brands.fa-youtube:hover {
+    color:#FF0000 ;
+}
+/* .sidebar_menu .logo a:hover {
+    color:aqua; /* Or any desired color */
+
